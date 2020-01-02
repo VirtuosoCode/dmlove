@@ -40,7 +40,6 @@
                         <span class="say">我会把我最好的都给你</span><br>
                         <span class="say">因为你是我的唯一，是我的一切</span><br>
                         <span class="say">生活有你才充满了意义</span><br>
-                        <span class="say">你的迟到让我差点以为这个世界不过如此</span><br>
                         <span class="say"> </span><br>
                         <span class="say"><span class="space"></span> -- 爱你的笨猪--</span>
                     </font>
@@ -186,17 +185,10 @@
             }));
 
             var textAnimate = eval(Jscex.compile("async", function() {
-                var together = new Date();
-                together.setFullYear(2019, 10, 12); //时间年月日
-                together.setHours(16); //小时	
-                together.setMinutes(53); //分钟
-                together.setSeconds(0); //秒前一位
-                together.setMilliseconds(2); //秒第二位
-
                 $("#code").show().typewriter();
                 $("#clock-box").fadeIn(500);
                 while (true) {
-                    timeElapse(together);
+                    timeElapse("2019-10-12");  // 设置在一起的开始时间
                     $await(Jscex.Async.sleep(1000));
                 }
             }));
